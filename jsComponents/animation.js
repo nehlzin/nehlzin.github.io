@@ -2,7 +2,7 @@ const contactPage = document.querySelector(".contact");
 const aboutPage = document.querySelector(".about");
 
 function aboutPageScrollAnimation() {
-  let mainAboutContainer = document.getElementById("mainAboutCon");
+  let mainAboutContainer = document.getElementById("aboutPage");
   let aboutTop = mainAboutContainer.getBoundingClientRect().top;
   let aboutScreenSize = window.innerHeight / 1.3;
 
