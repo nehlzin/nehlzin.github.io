@@ -2,7 +2,7 @@ const contactPage = document.querySelector(".contact");
 const aboutPage = document.querySelector(".about");
 
 function aboutPageScrollAnimation() {
-  let mainAboutContainer = document.getElementById("aboutPage");
+  let mainAboutContainer = document.getElementById("mainAboutCon");
   let aboutTop = mainAboutContainer.getBoundingClientRect().top;
   let aboutScreenSize = window.innerHeight / 1.3;
 
@@ -12,6 +12,7 @@ function aboutPageScrollAnimation() {
     aboutPage.classList.remove("slideUp");
   }
 }
+
 function contactPageScrollAnimation() {
   let mainContactSection = document.getElementById("contactSection");
   let contactTop = contactPage.getBoundingClientRect().top;
