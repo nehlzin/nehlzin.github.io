@@ -5,11 +5,12 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  /* outline: 1px solid skyblue; */
 }
 
 body {
   position: relative;
-  background-color: #131413;
+  background-color: #060c08;
 }
 
 html {
@@ -41,81 +42,15 @@ html::-webkit-scrollbar-thumb {
 /* *************************** SECTION 1 HOME */
 /* *************************** SECTION 1 HOME */
 
-.homeLines {
-  background-color: #496153;
-  top: 0px;
-  height: aut0;
-  width: auto;
-  display: flex;
-  right: 20px;
-  align-items: center;
-  justify-content: space-evenly;
-  position: absolute;
-  transform: translate 0px;
-}
-
-.homeLines .Hline1 {
-  background-color: #496153;
-  display: flex;
-  height: 100%;
-  position: absolute;
-  width: 1.5px;
-  left: 5px;
-  animation: homeLineR 1s ease-in-out;
-}
-
-.homeLines .Hline2 {
-  display: flex;
-  left: 0px;
-  height: 100%;
-  position: absolute;
-  width: 1.5px;
-  background-color: #496153;
-  animation: homeLineL 1s ease-in-out;
-}
-
-@keyframes homeLineR {
-  from {
-    transform: translateX(-100%);
-  }
-}
-
-@keyframes homeLineL {
-  from {
-    transform: translateX(-100%);
-  }
-}
-
 .home {
   height: 100vh;
   width: 100%;
   margin: auto;
   display: flex;
-  overflow: hidden;
   position: relative;
   flex-direction: column;
 }
 
-.home .mobileIndex {
-  display: none;
-}
-
-.home .page-index {
-  display: flex;
-  position: absolute;
-  bottom: 0px;
-  z-index: 2;
-}
-
-.home .page-index h6 {
-  position: relative;
-  height: 100%;
-  width: auto;
-  margin: auto;
-  color: #50453b;
-  font-size: 200px;
-  font-family: Square721 BT;
-}
 
 .home .logo-nav {
   display: flex;
@@ -128,15 +63,6 @@ html::-webkit-scrollbar-thumb {
   height: auto;
 }
 
-@keyframes navSlideIn {
-  from {
-    transform: translateY(-100%)s;
-  }
-
-  to {
-    transform: translateY(0%);
-  }
-}
 
 .mobileHamburgerMenu {
   display: none;
@@ -157,7 +83,6 @@ html::-webkit-scrollbar-thumb {
   display: flex;
   width: auto;
   margin: 10px;
-  /* background-color: yellow; */
 }
 
 .home .logo .logo-line .line-1,
@@ -202,19 +127,12 @@ nav {
   animation: dropDown 2s ease;
 }
 
-@keyframes dropDown {
-  from {
-    transform: translateY(-50%);
-  }
-}
-
 nav .nav-links {
   resize: none;
   height: auto;
   display: flex;
   margin: auto;
   width: 100%;
-  /* background-color: #00ff6a; */
   align-items: center;
   justify-content: space-evenly;
   align-items: center;
@@ -246,41 +164,6 @@ nav .nav-links a:hover {
   border-top: unset;
 }
 
-/* self ******************** */
-/* self ******************** */
-/* self ******************** */
-/* self ******************** */
-/* self ******************** */
-/* self ******************** */
-
-.selfBckGrndImage {
-  position: fixed;
-  top: 0px;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: 100vh;
-  margin: auto;
-}
-
-.selfBckGrndImage .selfbckgrndCon {
-  display: flex;
-  margin: auto;
-  position: absolute;
-  height: auto;
-  width: 100%;
-  height: 100%;
-  justify-items: center;
-  align-items: center;
-}
-
-.overlayCon {
-  display: none;
-}
-
-.overlayCon .imageOverlay {
-  display: none;
-}
 
 .selfBckGrndImage .selfbckgrndCon img {
   display: flex;
@@ -289,32 +172,28 @@ nav .nav-links a:hover {
   height: auto;
   width: 100%;
   margin: auto;
-
-  /* opacity: 0.5; */
-  /* animation: mapSlide 20s linear infinite; */
 }
 
-@keyframes mapSlide {
-  from {
-    transform: translateX(100%);
-  }
 
-  to {
-    transform: translateX(-100%);
-  }
+.homeContent {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .self {
-  align-self: center;
   height: auto;
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
-  position: absolute;
+  position: relative;
   justify-content: center;
   align-items: center;
   margin: auto;
-  transform: translate(0%, 50%);
 }
 
 .self .myImage {
@@ -322,12 +201,12 @@ nav .nav-links a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px;
+  margin: auto;
   height: 400px;
   width: 400px;
   overflow: hidden;
   position: relative;
-  border-radius: 50%;
+  border-radius: 40%;
   background-color: #496153;
   animation: slideThru 1.5s ease;
 }
@@ -359,7 +238,7 @@ nav .nav-links a:hover {
 
 @keyframes slideThru {
   from {
-    transform: translateX(-100%);
+    transform: translateX(-70%);
   }
 
   to {
@@ -369,7 +248,7 @@ nav .nav-links a:hover {
 
 @keyframes popMe {
   0% {
-    transform: translateX(100%);
+    transform: translateX(80%);
   }
 
   50% {
@@ -381,9 +260,6 @@ nav .nav-links a:hover {
   }
 }
 
-/* .self .my-self:hover {
-  box-shadow: 2px 0px 20px 3px #00ff6a;
-} */
 .self .textCon {
   justify-content: center;
   align-items: center;
@@ -421,9 +297,6 @@ nav .nav-links a:hover {
   width: 100%;
 }
 
-/* .self .text-content h2 .last {
-  background-color: #4961537c;
-} */
 
 .self .text-content h2 .first {
   border-radius: 5px;
@@ -434,131 +307,59 @@ nav .nav-links a:hover {
   font-size: 50px;
 }
 
-/* **************************** DATE */
-/* **************************** DATE */
-/* **************************** DATE */
-/* **************************** DATE */
-
 .nav-toggle {
   display: none;
 }
 
-.homeDate {
-  width: 100%;
-  height: auto;
-  position: relative;
-  resize: none;
-  display: flex;
-  align-items: center;
-  animation: date 5s ease;
-  justify-content: flex-start;
-  margin: auto;
-  left: 0px;
-  animation: dateDrop 2s ease;
-}
-
-@keyframes dateDrop {
-  0% {
-    opacity: 0.1;
-    transform: translateX(-50%);
-  }
-
-  50% {
-    opacity: 1;
-    transform: translateX(10px);
-  }
-
-  100% {
-    transform: translateX(0%);
-  }
-}
-
-.homeDate .date {
-  display: flex;
-  height: auto;
-  width: auto;
-  position: relative;
-  padding: 0px 20px;
-  align-items: center;
-  resize: none;
-  margin: 10px;
-}
-
-.homeDate .date .day-and-month {
-  margin-right: 10px;
-  height: auto;
-  width: auto;
-  display: flex;
-  flex-direction: column;
-}
-
-.homeDate .date .day-and-month .day h4 {
-  font-size: 40px;
-  font-family: monospace;
-  text-align: center;
-  line-height: 80%;
-  color: #788467;
-}
-
-.homeDate .date .day-and-month .month h3 {
-  font-size: 20px;
-  font-family: monospace;
-  color: #788467;
-}
-
-.homeDate .date .year h1 {
-  font-size: 50px;
-  font-family: monospace;
-  color: #788467;
-  margin: 10px;
-  outline: 2px solid green;
-}
-
 .homeSocials {
   display: flex;
-  flex-direction: column;
-  position: absolute;
-  right: -10px;
-  padding-right: 20px;
-  width: auto;
-  height: 50%;
-  transform: translateY(50%);
-  padding: 10px;
+  position: relative;
+  width: 50%;
+  padding: 15px 10px;
+  height: auto;
   margin: auto;
-  margin-bottom: 20px;
   justify-content: space-evenly;
   border: 1px solid #788467;
-  border-right: none;
   border-radius: 10px;
   backdrop-filter: blur(3px);
 }
 
 .homeSocials a {
   font-weight: 500px;
-  font-size: 20px;
+  font-size: 30px;
   color: #496153;
   padding: 10px;
-  border-radius: 50%;
   display: flex;
   margin: auto;
   position: relative;
   text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  transition: all 500ms ease;
+  flex: 1;
+}
+
+.homeSocials a:hover {
+  transform: scale(1.5, 1.5);
+}
+
+.homeSocials a i {
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  margin: auto;
+  object-fit: cover;
+  justify-content: center;
+  align-items: center;
 }
 
 /* ************************* ABOUT SECTION */
 /* ************************* ABOUT SECTION */
 /* ************************* ABOUT SECTION */
 /* ************************* ABOUT SECTION */
-/* ************************* ABOUT SECTION */
-/* ************************* ABOUT SECTION */
-/* ************************* ABOUT SECTION */
-/* ************************* ABOUT SECTION */
-/* ************************* ABOUT SECTION */
-/* ************************* ABOUT SECTION */
-/* ************************* ABOUT SECTION */
-/* ************************* ABOUT SECTION */
-/* ************************* ABOUT SECTION */
-/* ************************* ABOUT SECTION */
+
 .aboutMainCon {
   position: relative;
   justify-content: center;
@@ -575,35 +376,16 @@ nav .nav-links a:hover {
   flex-direction: column;
   padding: 20px;
   width: 100%;
-  height: auto;
+  height: 100%;
   position: absolute;
   margin: auto;
   justify-content: center;
   align-items: center;
   opacity: 0.3;
   transform: translateY(80%);
-  transition: all 1s ease-in;
+  transition: all 650ms ease-in;
 }
 
-.about-nav {
-  padding: 0px;
-  margin: auto;
-  display: none;
-  justify-content: space-between;
-  align-items: center;
-  height: auto;
-  width: 90%;
-  resize: none;
-}
-
-.about-nav .logo-and-links {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  /* background-color: hotpink; */
-  width: 100%;
-  z-index: 2;
-}
 
 .about-nav .logo-and-links .logo {
   height: auto;
@@ -627,12 +409,6 @@ nav .nav-links a:hover {
 .about-nav .logo-and-links .logo .logo-line-2 {
   margin: 10px 0px;
   height: 20px;
-}
-
-.about-nav .links {
-  width: auto;
-  display: flex;
-  justify-content: space-evenly;
 }
 
 .about-nav .links a {
@@ -717,7 +493,7 @@ nav .nav-links a:hover {
 .about .about-bckgrnd-design .lines-and-index .about-content {
   justify-content: space-evenly;
   width: 100%;
-  height: 1005;
+  height: 100%;
   display: flex;
   margin: auto;
   flex-direction: column;
@@ -769,7 +545,6 @@ nav .nav-links a:hover {
   overflow: hidden;
   position: relative;
   display: flex;
-  right: 0px;
 
 }
 
@@ -785,7 +560,7 @@ nav .nav-links a:hover {
 
 .about .about-bckgrnd-design .lines-and-index .about-content .p-tag-and-art-img .art-image:hover::before {
   transform: translate(0px, 0px);
-  background-color: #313030;
+  background-color: rgba(0, 0, 0, 0.412);
 }
 
 .about .about-bckgrnd-design .lines-and-index .about-content .p-tag-and-art-img .art-image img {
@@ -793,6 +568,7 @@ nav .nav-links a:hover {
   width: inherit;
   object-fit: contain;
   position: relative;
+  z-index: 10;
 }
 
 .about .about-bckgrnd-design .lines-and-index p {
@@ -828,7 +604,7 @@ nav .nav-links a:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  height: 50%;
+  height: 100%;
   top: 0px;
 }
 
@@ -846,7 +622,6 @@ nav .nav-links a:hover {
 .about .about-bckgrnd-design .lines-and-index .experiences .software {
   display: flex;
   flex-direction: column;
-  margin-top: 10%;
   height: 50%;
 }
 
@@ -893,15 +668,7 @@ nav .nav-links a:hover {
   background-color: #98a389;
 }
 
-/* ************************************ SERVICES*************** */
-
-/* ************************************ SERVICES*************** */
-
-/* ************************************ SERVICES*************** */
-
-/* ************************************ SERVICES*************** */
-
-/* ************************************ SERVICES*************** */
+/* service */
 
 .services {
   display: flex;
@@ -1127,8 +894,8 @@ nav .nav-links a:hover {
   transform: translateY(80%);
   opacity: 0.2;
   display: flex;
-  width: 80%;
-  height: 70%;
+  width: 75%;
+  height: 65%;
   align-items: center;
   justify-content: center;
   margin: auto;
@@ -1367,9 +1134,10 @@ footer h3 .f-logo {
 
   .home {
     display: flex;
-    width: 100%;
+    width: auto;
     height: auto;
-    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
   }
 
   .mobileHamburgerMenu {
@@ -1480,19 +1248,18 @@ footer h3 .f-logo {
     width: 100%;
     height: 100vh;
     position: relative;
-    padding: 0px;
-    /* border-bottom: 2.26px solid #78846745; */
-    border-width: 50%;
+    padding: unset;
+    justify-content: space-evenly;
   }
 
   .home .logo-nav {
     position: relative;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     display: flex;
-    padding: 0px 20px;
-    width: auto;
-    margin: 20px;
+    width: 100%;
+    height: auto;
+    margin: auto;
   }
 
   .home .logo-nav .logo {
@@ -1500,7 +1267,7 @@ footer h3 .f-logo {
     align-items: center;
     position: relative;
     padding: unset;
-    margin: 0px;
+    margin: 0px 20px;
     display: flex;
     height: auto;
     width: auto;
@@ -1541,17 +1308,6 @@ footer h3 .f-logo {
     font-size: 80px;
   }
 
-  .homeDate {
-    display: flex;
-    width: 100%;
-    margin: auto;
-    padding: 0px;
-    align-items: center;
-    justify-content: space-between;
-    opacity: 0.3;
-    z-index: 2;
-  }
-
   .home .mobileIndex {
     display: flex;
     margin: 10px;
@@ -1562,29 +1318,6 @@ footer h3 .f-logo {
     position: relative;
   }
 
-  .mobileIndex h6 {
-    font-size: 70px;
-    margin: auto;
-    color: #496153;
-    font-family: montserrat;
-  }
-
-  .selfBckGrndImage {
-    top: 0px;
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    margin: auto;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .selfBckGrndImage .selfbckgrndCon {
-    overflow: unset;
-    width: 100%;
-    height: 100%;
-  }
-
   .selfBckGrndImage .selfbckgrndCon img {
     height: 100%;
     width: auto;
@@ -1592,25 +1325,35 @@ footer h3 .f-logo {
     position: absolute;
   }
 
+  .homeContent {
+    position: relative;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 80%;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
   .self {
     display: flex;
-    margin: 10px;
+    margin: unset;
     padding: 0px;
-    height: auto;
+    height: 100%;
     width: 100%;
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
     position: relative;
-    flex-grow: 1;
   }
 
-  .textCon {
+  .self .textCon {
     margin: unset;
     padding: unset;
     display: flex;
-    width: auto;
-    height: auto;
+    width: 100%;
+    height: 40%;
     align-items: center;
     justify-content: center;
     position: relative;
@@ -1631,7 +1374,7 @@ footer h3 .f-logo {
     flex-wrap: wrap;
     font-size: 20px;
     padding: unset;
-    width: 30rem;
+    width: 100%;
     height: 100%;
     display: flex;
     text-align: center;
@@ -1650,9 +1393,6 @@ footer h3 .f-logo {
     overflow: unset;
   }
 
-  .self {
-    transform: translate(0%, 0%);
-  }
 
   .self .myImage {
     position: relative;
@@ -1692,12 +1432,7 @@ footer h3 .f-logo {
   /* ***************** ABOUT ***************** */
   /* ***************** ABOUT ***************** */
   /* ***************** ABOUT ***************** */
-  /* ***************** ABOUT ***************** */
-  /* ***************** ABOUT ***************** */
-  /* ***************** ABOUT ***************** */
-  /* ***************** ABOUT ***************** */
-  /* ***************** ABOUT ***************** */
-  /* ***************** ABOUT ***************** */
+
   .aboutMainCon {
     height: auto;
     width: 100%;
@@ -1729,7 +1464,7 @@ footer h3 .f-logo {
     display: flex;
     flex-direction: column;
     position: relative;
-    margin: unset;
+    margin: auto;
   }
 
   .about .about-bckgrnd-design .lines-and-index {
@@ -1740,8 +1475,8 @@ footer h3 .f-logo {
   .about .about-bckgrnd-design .lines-and-index .about-index {
     display: flex;
     flex-direction: row;
-    justify-content: unset;
-    align-items: unset;
+    justify-content: center;
+    align-items: center;
     position: relative;
   }
 
@@ -1751,6 +1486,7 @@ footer h3 .f-logo {
     position: relative;
     font-size: 20px;
     padding: 0px 10px;
+    margin: auto;
   }
 
   .about .about-bckgrnd-design .lines-and-index .about-index .lines {
@@ -1787,13 +1523,14 @@ footer h3 .f-logo {
     height: 3px;
     width: 70%;
     position: relative;
+
   }
 
   .about .about-items {
     justify-content: center;
     align-items: center;
     margin: auto;
-    width: 100%;
+    width: auto;
     height: auto;
     position: relative;
     display: flex;
@@ -1832,6 +1569,7 @@ footer h3 .f-logo {
     display: flex;
     flex-direction: column;
     position: relative;
+    width: auto;
   }
 
   .about .about-items .about-content .aboutContentContainer .about-context .p-tag-and-art-img {
@@ -1878,11 +1616,15 @@ footer h3 .f-logo {
   }
 
   .about .about-items .about-content .aboutContentContainer .about-context .experiences {
-    width: 100%;
+    width: auto;
     height: auto;
-    padding: 5px;
-    margin: unset;
+    padding: 10px;
+    margin: auto;
     position: relative;
+  }
+
+  .about .about-items .about-content .aboutContentContainer .about-context .experiences hr {
+    margin: 0px 10px;
   }
 
   .about .about-items .about-content .mySocials {
@@ -1986,6 +1728,9 @@ footer h3 .f-logo {
   .contact {
     height: 90vh;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .contactHeader {
@@ -2032,12 +1777,15 @@ footer h3 .f-logo {
     line-height: 60px;
     text-align: center;
     font-family: lobster;
-    width: 50%;
+    width: 100%;
+    height: auto;
     display: flex;
     flex-wrap: wrap;
-    font-size: 70px;
+    font-size: 50px;
     font-weight: 600;
     color: #496153;
+    padding: unset;
+    margin: auto;
   }
 
   .contactInput {

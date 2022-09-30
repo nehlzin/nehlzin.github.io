@@ -29,6 +29,7 @@
 
     <div class="mobileHamburgerMenu">
       <button
+        type="button"
         class="mobileHamburgerMenuBtn"
         id="mobileHamburgerMenuBtn"
         aria-label="menu">
@@ -49,11 +50,6 @@
     </div>
 
     <section class="home" id="home">
-      <div class="homeLines">
-        <div class="Hline1"></div>
-        <div class="Hline2"></div>
-      </div>
-
       <div class="logo-nav">
         <div class="logo">
           <div class="logo-line">
@@ -64,52 +60,37 @@
         </div>
       </div>
 
-      <div class="page-index">
-        <h6>01</h6>
-      </div>
-
-      <div class="homeDate">
-        <div class="date">
-          <div class="day-and-month">
-            <div class="month">
-              <h3 id="month">JUL</h3>
-            </div>
-            <div class="day">
-              <h4 id="day" class="dayText">02</h4>
+      <div class="homeContent">
+        <div class="self">
+          <div class="textCon">
+            <div class="text-content">
+              <h2 class="autoType"></h2>
             </div>
           </div>
-        </div>
-      </div>
 
-      <div class="self">
-        <div class="textCon">
-          <div class="text-content">
-            <h2 class="autoType"></h2>
+          <div class="myImage">
+            <img src="./assets/doodle.png" class="imgDoodle" title="doodle" />
+            <img
+              src="../assets/nel-art.png"
+              alt="web developer"
+              class="my-self" />
           </div>
         </div>
 
-        <div class="myImage">
-          <img src="./assets/doodle.png" class="imgDoodle" title="doodle" />
-          <img
-            src="../assets/nel-art.png"
-            alt="web developer"
-            class="my-self" />
+        <div class="homeSocials">
+          <a href="https://instagram.com/nehlzin" title="instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://twitter.com/nehlzin" title="twitter"
+            ><i class="fa-brands fa-twitter"></i
+          ></a>
+          <a href="https://dribbble.com/nehlzin" title="facebook"
+            ><i class="fa-brands fa-dribbble"></i
+          ></a>
+          <a href="https://github.com/nehlzin" title="github"
+            ><i class="fa-brands fa-gitlab"></i
+          ></a>
         </div>
-      </div>
-
-      <div class="homeSocials">
-        <a href="https://instagram.com/nehlzin" title="instagram">
-          <i class="fa-brands fa-instagram"></i>
-        </a>
-        <a href="https://twitter.com/nehlzin" title="twitter"
-          ><i class="fa-brands fa-twitter"></i
-        ></a>
-        <a href="https://dribbble.com/nehlzin" title="facebook"
-          ><i class="fa-brands fa-dribbble"></i
-        ></a>
-        <a href="https://github.com/nehlzin" title="github"
-          ><i class="fa-brands fa-gitlab"></i
-        ></a>
       </div>
     </section>
 
@@ -136,18 +117,22 @@
               <div class="about-content">
                 <!-- <h4 class="aboutHeader">About</h4> -->
                 <div class="aboutContentContainer">
-                  <h3 class="about-h3">
-                    hello! <span>My name is <span>NELSON</span></span>
+                  <h3 class="about-h3 aboutLeftAnimation">
+                    hello!
+                    <span
+                      >My name is
+                      <span class="aboutRightAnimation">NELSON</span></span
+                    >
                   </h3>
                   <div class="about-context">
                     <div class="p-tag-and-art-img">
-                      <p>
+                      <p class="aboutRightAnimation">
                         I'm a self taught FrontEnd DeV, Product and Graphic
                         Designer from Nigeria, obsessed with creating dynamic
                         user experience and making it Accessible to everyone,
                         found my interest in Designing year 2k19 and ever since
                         i can say that has been a big flex on my career path,
-                        design for me exceed beyond putting stuffs in place for
+                        design for me exceeds beyond putting stuffs in place for
                         view purpose... It's A LIFE STYLE with the right amount
                         of consistency
                       </p>
@@ -158,14 +143,14 @@
 
                     <h3>Skill set:</h3>
                     <div class="experiences">
-                      <div class="code">
+                      <div class="code aboutLeftAnimation">
                         <a href="#">HTML / Css</a>
                         <a href="#">javaScript (ES6+)</a>
                         <a href="#">React</a>
                         <a href="#">React Native</a>
                       </div>
                       <hr />
-                      <div class="software">
+                      <div class="software aboutRightAnimation">
                         <a href="#">FIGMA</a>
                         <a href="#">Premiere Pro</a>
                         <a href="#">Adobe XD</a>

@@ -1,6 +1,7 @@
 const contactPage = document.querySelector(".contact");
 const aboutPage = document.querySelector(".about");
 
+
 function aboutPageScrollAnimation() {
   let mainAboutContainer = document.getElementById("mainAboutCon");
   let aboutTop = mainAboutContainer.getBoundingClientRect().top;
@@ -25,10 +26,13 @@ function contactPageScrollAnimation() {
   }
 }
 
+
 window.addEventListener("scroll", () => {
   aboutPageScrollAnimation();
   contactPageScrollAnimation();
 });
+
+// hamburger menu toggle animation
 
 function navAnim() {
   const navBtn = document.getElementById("mobileHamburgerMenuBtn");

@@ -12,7 +12,8 @@
       "default",
       {
         "ignore": [
-          "backdrop-filter"
+          "backdrop-filter",
+          "-webkit-backdrop-filter"
         ]
       }
     ]

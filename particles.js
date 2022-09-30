@@ -12,7 +12,6 @@ var pJS = function (tag_id, params) {
     "#" + tag_id + " > .particles-js-canvas-el"
   );
 
-  /* particles.js variables with default values */
   this.pJS = {
     canvas: {
       el: canvas_el,
@@ -22,10 +21,10 @@ var pJS = function (tag_id, params) {
 
     particles: {
       number: {
-        value: 80,
+        value: 0,
         density: {
-          enable: true,
-          value_area: 800,
+          enable: false,
+          value_area: 60,
         },
       },
       color: {
@@ -55,7 +54,7 @@ var pJS = function (tag_id, params) {
           enable: false,
           speed: 40,
           size_min: 0.1,
-          sync: false,
+          sync: true,
         },
       },
       line_linked: {
@@ -863,8 +862,7 @@ var pJS = function (tag_id, params) {
         init();
       }
     } else if (
-
-    /* on click event */
+      /* on click event */
       pJS.interactivity.events.onclick.enable &&
       isInArray("bubble", pJS.interactivity.events.onclick.mode)
     ) {
