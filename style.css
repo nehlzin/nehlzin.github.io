@@ -356,9 +356,6 @@ nav .nav-links a:hover {
 }
 
 /* ************************* ABOUT SECTION */
-/* ************************* ABOUT SECTION */
-/* ************************* ABOUT SECTION */
-/* ************************* ABOUT SECTION */
 
 .aboutMainCon {
   position: relative;
@@ -382,8 +379,8 @@ nav .nav-links a:hover {
   justify-content: center;
   align-items: center;
   opacity: 0.3;
-  transform: translateY(80%);
-  transition: all 650ms ease-in;
+  /* transform: translateY(80%);
+  transition: all 650ms ease-in; */
 }
 
 
