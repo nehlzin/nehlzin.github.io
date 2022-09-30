@@ -1754,7 +1754,7 @@ footer h3 .f-logo {
     padding: unset;
     margin: unset;
     display: flex;
-    height: 100vh;
+    height: auto;
     width: auto;
     overflow: hidden;
   }
