@@ -1929,6 +1929,8 @@ footer h3 .f-logo {
     display: flex;
     margin: auto;
     padding: 10px;
+    position: absolute;
+    bottom: 0px;
     justify-content: center;
     align-items: center;
   }
