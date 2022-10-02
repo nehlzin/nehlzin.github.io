@@ -5,7 +5,6 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  /* outline: 1px solid skyblue; */
 }
 
 body {
@@ -690,6 +689,7 @@ nav .nav-links a:hover {
   flex-direction: column;
   position: absolute;
   align-items: center;
+  z-index: -1;
 }
 
 .services .services-container .s-line .s-line-1 {
@@ -736,13 +736,14 @@ nav .nav-links a:hover {
   display: flex;
   flex-direction: column;
   margin: auto;
+  margin-top: 8%;
   align-items: center;
   justify-content: space-evenly;
   color: #98a389;
 }
 
 .serviceBtn {
-  margin: 10px;
+  margin: auto;
   position: relative;
   display: flex;
   width: 100%;
@@ -752,7 +753,6 @@ nav .nav-links a:hover {
 }
 
 .serviceBtn .preojectSorting {
-  margin-top: 5rem;
   font-size: 20px;
   font-family: monospace;
   border: none;
@@ -802,6 +802,8 @@ nav .nav-links a:hover {
   overflow: hidden;
   border-radius: 10px;
   padding: 10px;
+  -webkit-backdrop-filter: blur(5px);
+  background-color: #0e141025;
 }
 
 .services .services-container .s-contxt .myProj .project .projectContaier .projImgCon {
@@ -844,7 +846,7 @@ nav .nav-links a:hover {
   border-bottom: 1px solid #718f7d;
 }
 
-.projContext .etraContext {
+.projContext .extraContext {
   display: flex;
   justify-content: space-between;
   margin: auto;
@@ -853,7 +855,7 @@ nav .nav-links a:hover {
   height: auto;
 }
 
-.projContext .etraContext a {
+.projContext .extraContext a {
   cursor: pointer;
   text-decoration: none;
   color: white;
@@ -865,8 +867,11 @@ nav .nav-links a:hover {
   border-radius: 5px;
 }
 
-.projContext .etraContext a:hover {
+.projContext .extraContext a:hover {
   border: 1px solid #4961536d;
+}
+.extraContext a .display {
+  display: none;
 }
 
 /* ********************CONTACT*************************** */
@@ -887,8 +892,8 @@ nav .nav-links a:hover {
 }
 
 .contactSection {
-  transition: all 1s ease-in-out;
-  transform: translateY(80%);
+  /* transition: all 1s ease-in-out;
+  transform: translateY(80%); */
   opacity: 0.2;
   display: flex;
   width: 75%;
@@ -1924,7 +1929,7 @@ footer h3 .f-logo {
   }
 
   footer {
-    height: 10vh;
+    height: auto;
     width: 100%;
     display: flex;
     margin: auto;
