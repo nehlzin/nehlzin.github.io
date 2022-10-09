@@ -1202,7 +1202,7 @@ footer h3 .f-logo {
     margin: 5px;
     height: 2px;
     width: 50px;
-    background-color: #496153;
+    background-color: var(--sideLines-color);
     position: relative;
     align-items: center;
     justify-content: center;
@@ -1937,5 +1937,18 @@ footer h3 .f-logo {
     bottom: 0px;
     justify-content: center;
     align-items: center;
+  }
+
+  footer h3 {
+    font-size: 15px;
+  }
+
+  footer h3 span {
+    font-size: 15px;
+    color: var(--sideLines-color);
+  }
+
+  footer h3 .f-logo {
+    color: var(--sideLines-color);
   }
 }
