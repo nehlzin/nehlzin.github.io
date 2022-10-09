@@ -7,9 +7,33 @@
   box-sizing: border-box;
 }
 
+:root {
+  --background-color: #1b1b1b;
+  --bckgrnd-color: hsl(0, 0%, 9%);
+  /* IMAGE */
+  --imageBackground-color: rgb(39, 39, 39);
+
+  /* TEXT */
+  --text-color: rgb(233, 239, 248);
+  --textHover-color: rgb(255, 255, 255);
+  --solidTextBackground: rgb(42, 41, 41);
+  --textBackground-color: rgba(55, 55, 55, 0.204);
+
+  /* OPACITY */
+  --min-opacity: .15;
+  --med-opacity: .45;
+  --max-opacity: .85;
+
+  /* LINE */
+  --sideLines-color: rgb(95, 95, 95);
+  --border-line: rgb(96, 96, 97);
+  --borderLine-hover: rgb(176, 178, 181);
+  --line-color: white;
+}
+
 body {
   position: relative;
-  background-color: #060c08;
+  background-color: var(--bckgrnd-color);
 }
 
 html {
@@ -17,20 +41,21 @@ html {
 }
 
 html::-webkit-scrollbar {
-  background-color: rgb(33, 81, 63, 0.102);
+  background-color: transparent;
   border-radius: 20px;
   width: 10px;
 }
 
 html::-webkit-scrollbar-track {
-  background-color: rgba(33, 81, 63, 0);
+  background-color: transparent;
   border-radius: 20px;
 }
 
 html::-webkit-scrollbar-thumb {
   display: flex;
   border-radius: 20px;
-  background-color: rgba(54, 158, 96, 0.652);
+  background-color: var(--sideLines-color);
+  opacity: .5;
 }
 
 /* *************************** SECTION 1 HOME */
@@ -87,7 +112,7 @@ html::-webkit-scrollbar-thumb {
 .home .logo .logo-line .line-1,
 .home .logo .logo-line .line-2 {
   resize: none;
-  background-color: #788467;
+  background-color: var(--sideLines-color);
   height: 25px;
   width: 10px;
 }
@@ -101,7 +126,7 @@ html::-webkit-scrollbar-thumb {
 .home .logo h1 {
   font-size: 25px;
   font-family: Lobster;
-  color: #788467;
+  color: var(--text-color);
 }
 
 .home .logo-nav .logo .navToggle {
@@ -141,7 +166,7 @@ nav .nav-links a {
   text-align: center;
   text-decoration: none;
   display: flex;
-  color: #98a389;
+  color: var(--text-color);
   font-weight: 600;
   font-family: monospace;
   font-size: 15px;
@@ -159,7 +184,7 @@ nav .nav-links a {
 }
 
 nav .nav-links a:hover {
-  border: 0.1px solid white;
+  border: 0.1px solid var(--border-line);
   border-top: unset;
 }
 
@@ -206,7 +231,7 @@ nav .nav-links a:hover {
   overflow: hidden;
   position: relative;
   border-radius: 40%;
-  background-color: #496153;
+  background-color: var(--imageBackground-color);
   animation: slideThru 1.5s ease;
 }
 
@@ -288,7 +313,7 @@ nav .nav-links a:hover {
   align-items: center;
   display: flex;
   font-size: 30px;
-  color: #496153;
+  color: var(--text-color);
   padding: unset;
   text-align: center;
   margin: 10px;
@@ -299,9 +324,9 @@ nav .nav-links a:hover {
 
 .self .text-content h2 .first {
   border-radius: 5px;
-  color: #718f7d;
+  color: var(--text-color);
   padding: 5px 15px;
-  background-color: #4961537c;
+  background-color: var(--imageBackground-color);
   font-family: lobster;
   font-size: 50px;
 }
@@ -318,7 +343,7 @@ nav .nav-links a:hover {
   height: auto;
   margin: auto;
   justify-content: space-evenly;
-  border: 1px solid #788467;
+  border: 1px solid var(--border-line);
   border-radius: 10px;
   backdrop-filter: blur(3px);
 }
@@ -326,7 +351,7 @@ nav .nav-links a:hover {
 .homeSocials a {
   font-weight: 500px;
   font-size: 30px;
-  color: #496153;
+  color: var(--text-color);
   padding: 10px;
   display: flex;
   margin: auto;
@@ -393,7 +418,7 @@ nav .nav-links a:hover {
 .about-nav .logo-and-links .logo .logo-line-1,
 .about-nav .logo-and-links .logo .logo-line-2 {
   display: flex;
-  background-color: #788467;
+  background-color: var(--sideLines-color);
   width: 8px;
 }
 
@@ -411,7 +436,7 @@ nav .nav-links a:hover {
   text-align: center;
   text-decoration: none;
   display: flex;
-  color: #788467;
+  color: var(--text-color);
   font-weight: 600;
   font-family: monospace;
   font-size: 20px;
@@ -453,14 +478,14 @@ nav .nav-links a:hover {
 .about .about-bckgrnd-design .lines-and-index h4 {
   font-family: monospace;
   font-size: 30px;
-  color: #788467;
+  color: var(--text-color);
   margin-bottom: 3%;
 
   font-family: lobster;
 }
 
 .about .about-bckgrnd-design .lines-and-index .about-index .lines .about-line-1 {
-  background-color: #788467;
+  background-color: var(--sideLines-color);
   width: 70px;
   height: 5px;
 }
@@ -474,14 +499,14 @@ nav .nav-links a:hover {
 
 .about .about-bckgrnd-design .lines-and-index .about-index .lines .about-line-2 {
   height: 50vh;
-  background-color: #788467;
+  background-color: var(--sideLines-color);
   width: 5px;
   transform: translate(0%, 0%);
 }
 
 .about .about-bckgrnd-design .lines-and-index .about-index .lines .about-line-3 {
   height: 80vh;
-  background-color: #788467;
+  background-color: var(--sideLines-color);
   width: 5px;
   transform: translate(0%, 0%);
 }
@@ -509,7 +534,7 @@ nav .nav-links a:hover {
 }
 
 .about .about-bckgrnd-design .lines-and-index .about-content h3 {
-  color: #788467;
+  color: var(--text-color);
   font-size: 20px;
   font-family: monospace;
   margin: 10px;
@@ -534,8 +559,8 @@ nav .nav-links a:hover {
 }
 
 .about .about-bckgrnd-design .lines-and-index .about-content .p-tag-and-art-img .art-image {
-  border-right: 2px solid #98a389;
-  border-bottom: 2px solid #98a389;
+  border-right: 2px solid var(--border-line);
+  border-bottom: 2px solid var(--border-line);
   height: 300px;
   width: auto;
   overflow: hidden;
@@ -549,14 +574,14 @@ nav .nav-links a:hover {
   position: absolute;
   height: 500px;
   width: 500px;
-  border: 2px solid #788467;
+  border: 2px solid var(--border-line);
   transform: translate(50px, 200px);
   transition: 1s ease;
 }
 
 .about .about-bckgrnd-design .lines-and-index .about-content .p-tag-and-art-img .art-image:hover::before {
   transform: translate(0px, 0px);
-  background-color: rgba(0, 0, 0, 0.412);
+  background-color: var(--imageBackground-color);
 }
 
 .about .about-bckgrnd-design .lines-and-index .about-content .p-tag-and-art-img .art-image img {
@@ -569,17 +594,16 @@ nav .nav-links a:hover {
 
 .about .about-bckgrnd-design .lines-and-index p {
   margin: 20px 0px;
-  font-size: 20px;
-  color: #98a389;
-  font-family: cursive;
+  font-size: 18px;
+  font-family: monospace;
   width: 70%;
   margin: auto;
-  align-self: center;
-  text-align: center;
+  text-align: justify;
   padding: 15px;
   border-radius: 15px;
-  border: 1px solid #98a389;
-  background-color: rgba(78, 126, 75, 0.104);
+  color: var(--text-color);
+  border: 1px solid var(--border-line);
+  background-color: var(--textBackground-color);
 }
 
 .about .about-bckgrnd-design .lines-and-index .experiences {
@@ -591,8 +615,8 @@ nav .nav-links a:hover {
   border-radius: 10px;
   display: flex;
   padding: 10px;
-  border: 1px solid #98a389;
-  background-color: rgba(78, 126, 75, 0.104);
+  border: 1px solid var(--border-line);
+  background-color: var(--textBackground-color);
   backdrop-filter: blur(1px);
 }
 
@@ -608,11 +632,11 @@ nav .nav-links a:hover {
   text-decoration: none;
   font-size: 15px;
   font-family: monospace;
-  color: #98a389;
+  color: var(--text-color);
 }
 
 .about .about-bckgrnd-design .lines-and-index .experiences hr {
-  border: 1px solid #98a389;
+  border: 1px solid var(--border-line);
 }
 
 .about .about-bckgrnd-design .lines-and-index .experiences .software {
@@ -625,7 +649,7 @@ nav .nav-links a:hover {
   text-decoration: none;
   font-size: 15px;
   font-family: monospace;
-  color: #98a389;
+  color: var(--text-color);
 }
 
 .about .mySocials {
@@ -645,7 +669,7 @@ nav .nav-links a:hover {
   display: flex;
   flex-direction: row;
   margin: auto;
-  border: 1px solid #98a389;
+  border: 1px solid var(--border-line);
   backdrop-filter: blur(1px);
 }
 
@@ -653,15 +677,15 @@ nav .nav-links a:hover {
   text-decoration: none;
   font-family: monospace;
   font-size: 15px;
-  color: #98a389;
+  color: var(--text-color);
   padding: 5px;
 }
 
 .about .mySocials .ul a:hover {
-  color: rgb(41, 41, 41);
+  color: var(--textHover-color);
   font-weight: 600;
   border-radius: 5px;
-  background-color: #98a389;
+  background-color: var(--solidTextBackground);
 }
 
 /* service */
@@ -699,14 +723,14 @@ nav .nav-links a:hover {
   margin: auto;
   position: absolute;
   padding-left: 5%;
-  border-bottom: 3px solid #98a389;
+  border-bottom: 3px solid var(--sideLines-color);
 }
 
 .services .services-container .s-line .s-line-1 h1 {
   font-family: Dancing Script;
   font-size: 50px;
   padding: 5px;
-  color: #98a389;
+  color: var(--text-color);
 }
 
 .services .services-container .s-line .s-line-2 {
@@ -716,7 +740,7 @@ nav .nav-links a:hover {
   display: flex;
   margin: auto;
   position: absolute;
-  background-color: #98a389;
+  background-color: var(--sideLines-color);
 }
 
 .services .services-container .s-line .s-line-3 {
@@ -726,11 +750,11 @@ nav .nav-links a:hover {
   display: flex;
   margin: auto;
   position: absolute;
-  background-color: #98a389;
+  background-color: var(--sideLines-color);
 }
 
 .services .services-container .s-contxt {
-  color: white;
+  color: var(--text-color);
   width: 90%;
   height: auto;
   display: flex;
@@ -739,7 +763,6 @@ nav .nav-links a:hover {
   margin-top: 8%;
   align-items: center;
   justify-content: space-evenly;
-  color: #98a389;
 }
 
 .serviceBtn {
@@ -798,12 +821,12 @@ nav .nav-links a:hover {
   justify-content: center;
   margin: 5px;
   cursor: pointer;
-  border: 1px solid #496153;
+  border: 1px solid var(--border-line);
   overflow: hidden;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   padding: 10px;
   -webkit-backdrop-filter: blur(5px);
-  background-color: #0e141025;
+  background-color: var(--textBackground-color);
 }
 
 .services .services-container .s-contxt .myProj .project .projectContaier .projImgCon {
@@ -814,7 +837,7 @@ nav .nav-links a:hover {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .services .services-container .s-contxt .myProj .project .projectContaier .projImgCon img {
@@ -831,7 +854,7 @@ nav .nav-links a:hover {
   margin-top: 10px;
   display: flex;
   flex-direction: column;
-  color: white;
+  color: var(--text-color);
   font-family: monospace;
   width: auto;
   height: auto;
@@ -839,11 +862,11 @@ nav .nav-links a:hover {
 
 .projContext .projTitle {
   font-size: 15px;
-  color: #7e9487c2;
+  color: var(--text-color);
   margin-top: 10px;
   padding-bottom: 10px;
   width: 100%;
-  border-bottom: 1px solid #718f7d;
+  border-bottom: 1px solid var(--border-line);
 }
 
 .projContext .extraContext {
@@ -858,18 +881,19 @@ nav .nav-links a:hover {
 .projContext .extraContext a {
   cursor: pointer;
   text-decoration: none;
-  color: white;
+  color: var(--text-color);
   margin-top: 10px;
   padding: 5px;
-  border: 1px solid #4961536d;
+  border: 1px solid var(--border-line);
   border-top: none;
   backdrop-filter: blur(5px);
   border-radius: 5px;
 }
 
 .projContext .extraContext a:hover {
-  border: 1px solid #4961536d;
+  border: 1px solid var(--borderLine-hover);
 }
+
 .extraContext a .display {
   display: none;
 }
@@ -892,8 +916,6 @@ nav .nav-links a:hover {
 }
 
 .contactSection {
-  /* transition: all 1s ease-in-out;
-  transform: translateY(80%); */
   opacity: 0.2;
   display: flex;
   width: 75%;
@@ -901,9 +923,9 @@ nav .nav-links a:hover {
   align-items: center;
   justify-content: center;
   margin: auto;
-  outline: 1px solid white;
+  outline: 1px solid var(--sideLines-color);
   padding: 20px;
-  background-color: #56886b64;
+  background-color: var(--solidTextBackground);
 }
 
 .contactText {
@@ -919,7 +941,7 @@ nav .nav-links a:hover {
 
   font-size: 100px;
   font-family: lobster;
-  color: #fff;
+  color: var(--text-color);
   text-align: center;
   padding-top: 20px;
   margin: auto;
@@ -935,7 +957,7 @@ nav .nav-links a:hover {
   width: 80%;
   height: 100%;
   justify-content: center;
-  outline: 1px solid white;
+  outline: 1px solid var(--sideLines-color);
 }
 
 .formCon {
@@ -981,15 +1003,15 @@ nav .nav-links a:hover {
   padding: 10px;
   height: 40px;
   width: 100%;
-  color: white;
-  border: 1px solid white;
+  color: var(--text-color);
+  border: 1px solid var(--sideLines-color);
   border-radius: 3px;
-  background-color: #7884675b;
+  background-color: var(--textBackground-color);
   outline: none;
 }
 
 .entries input::placeholder {
-  color: white;
+  color: var(--text-color);
 }
 
 .entriesMessage {
@@ -1006,15 +1028,15 @@ nav .nav-links a:hover {
   width: 100%;
   height: 100%;
   resize: none;
-  border: 1px solid white;
+  border: 1px solid var(--sideLines-color);
   border-radius: 3px;
-  background-color: #7884675b;
+  background-color: var(--textBackground-color);
   color: white;
   outline: none;
 }
 
 .messageInput::placeholder {
-  color: white;
+  color: var(--text-color);
   font-size: 15px;
 }
 
@@ -1029,16 +1051,16 @@ nav .nav-links a:hover {
   padding: 5px 20px;
   font-family: lobster;
   font-size: 15px;
-  color: white;
-  border: 1px solid white;
+  color: var(--text-color);
+  border: 1px solid var(--sideLines-color);
   background-color: transparent;
   border-radius: 3px;
   cursor: pointer;
 }
 
 .entryBtn .submitBtn:hover {
-  color: #788467;
-  background-color: white;
+  color: #1b1b1b;
+  background-color: var(--text-color);
   font-weight: 500;
 }
 
@@ -1078,14 +1100,14 @@ nav .nav-links a:hover {
 
 .contactHeader h1 {
   font-size: 80px;
-  color: #788467;
+  color: var(--text-color);
   display: flex;
   font-family: Dancing Script;
 }
 
 /* field animation */
 footer {
-  background-color: #232b23;
+  background-color: #303030;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -1211,7 +1233,7 @@ footer h3 .f-logo {
   }
 
   .navMobileLinks .mobileLinks {
-    background-color: hsl(0, 0%, 9%);
+    background-color: var(--background-color);
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -1227,7 +1249,6 @@ footer h3 .f-logo {
     text-decoration: none;
     text-align: center;
     font-family: lobster, monospace, Arial, Helvetica, sans-serif;
-    font-weight: 500;
     font-size: 30px;
     width: 100%;
     height: auto;
@@ -1236,7 +1257,7 @@ footer h3 .f-logo {
     display: flex;
     padding: 10px;
     margin: 10px 5px;
-    color: #788467;
+    color: var(--text-color);
   }
 
   nav {
@@ -1281,7 +1302,7 @@ footer h3 .f-logo {
 
   .home .logo-nav .navToggle {
     border: none;
-    background-color: rgba(255, 255, 255, 0.275);
+    background-color: var(--sideLines-color);
     justify-content: space-between;
     z-index: 99;
     align-items: center;
@@ -1293,7 +1314,6 @@ footer h3 .f-logo {
 
   .home .logo-nav .navToggle .div1,
   .home .logo-nav .navToggle .div2 {
-    background-color: green;
     width: 20px;
     height: 3px;
     position: relative;
@@ -1422,7 +1442,6 @@ footer h3 .f-logo {
   .homeSocials a {
     font-weight: 500px;
     font-size: 20px;
-    color: #496153;
     padding: 20px;
     display: flex;
     margin: auto;
@@ -1599,7 +1618,6 @@ footer h3 .f-logo {
     position: absolute;
     height: 500px;
     width: 500px;
-    border: 2px solid #788467;
     transform: translate(50px, 200px);
     transition: 1s ease;
   }
@@ -1749,7 +1767,7 @@ footer h3 .f-logo {
   }
 
   .contactHeader h1 {
-    font-size: 50px;
+    font-size: 10px;
   }
 
   .contact {
@@ -1772,7 +1790,6 @@ footer h3 .f-logo {
     background-color: unset;
     outline: unset;
     position: relative;
-    /* background-color: rgba(255, 255, 0, 0.634); */
   }
 
   .contactText {
@@ -1792,9 +1809,8 @@ footer h3 .f-logo {
     height: auto;
     display: flex;
     flex-wrap: wrap;
-    font-size: 50px;
-    font-weight: 600;
-    color: #496153;
+    font-size: 30px;
+    font-weight: 400;
     padding: 5px;
     margin: auto;
   }
@@ -1843,17 +1859,9 @@ footer h3 .f-logo {
     width: 300px;
     height: 50px;
     margin: 10px;
-    color: white;
     font-size: 15px;
-    background-color: rgba(0, 0, 0, 0.3);
     border-radius: 5px;
-    border: 1px solid #788467;
   }
-
-  .entries input::placeholder {
-    color: white;
-  }
-
   .entriesMessage {
     width: auto;
     height: auto;
@@ -1863,37 +1871,27 @@ footer h3 .f-logo {
     height: 150px;
     width: 300px;
     display: flex;
-    border: 1px solid #788467;
     padding: 10px;
     margin: 5px;
     margin-bottom: 20px;
     font-size: 15px;
     font-family: poppins;
-    background-color: rgba(0, 0, 0, 0.3);
-    border: 1px solid #788467;
     border-radius: 5px;
   }
 
-  .entriesMessage .messageInput::placeholder {
-    color: white;
-  }
 
-  .entryBtn button {
+  .entryBtn .submitBtn {
     margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 100%;
-    padding: 15px 20px;
+    padding: 10px 30px;
     font-family: roboto;
     font-weight: 500;
-    font-size: 15px;
-    background-color: rgba(0, 0, 0, 0.3);
-
-    color: white;
+    font-size: 20px;
     border-radius: 2px;
-    border: unset;
   }
 
   /* entryBtn button:hover {
