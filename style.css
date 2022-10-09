@@ -11,7 +11,7 @@
   --background-color: #1b1b1b;
   --bckgrnd-color: hsl(0, 0%, 9%);
   /* IMAGE */
-  --imageBackground-color: rgb(39, 39, 39);
+  --imageBackground-color: #1b1b1b;
 
   /* TEXT */
   --text-color: rgb(233, 239, 248);
@@ -1862,6 +1862,7 @@ footer h3 .f-logo {
     font-size: 15px;
     border-radius: 5px;
   }
+
   .entriesMessage {
     width: auto;
     height: auto;
