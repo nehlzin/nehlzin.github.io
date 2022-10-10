@@ -307,7 +307,7 @@ nav .nav-links a:hover {
 }
 
 .self .text-content h2 {
-  font-family: montserrat;
+  font-family: monospace;
   position: relative;
   justify-content: center;
   align-items: center;
@@ -1895,10 +1895,6 @@ footer h3 .f-logo {
     border-radius: 2px;
   }
 
-  /* entryBtn button:hover {
-    background-color: rgba(255, 255, 255, 0.542);
-  } */
-
   .contactSection .contactActivity {
     display: flex;
     justify-content: center;
@@ -1933,7 +1929,7 @@ footer h3 .f-logo {
     display: flex;
     margin: auto;
     padding: 10px;
-    position: absolute;
+    position: relative;
     bottom: 0px;
     justify-content: center;
     align-items: center;
